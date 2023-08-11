@@ -1,0 +1,82 @@
+:root {
+  /* --main-color: rgb(105, 39, 251); */
+  --main-color: #A51C30; 
+  --main-color-hover: rgba(165, 28, 49, 0.2);
+  --track-color: lightgrey;
+
+  --track-height: 10px;
+  --thumb-size: 20px;
+  --thumb-border: 5px;
+  
+  --disabled-color: grey;
+  --disabled-color-hover:  rgba(128, 128, 128, 0.2);
+}
+
+
+.slider {
+  /* max width of your slider */
+  max-width: 80%;
+  height: auto;
+  margin: auto;
+  bottom: 1.5em;
+}
+
+/* If the viewport size is less than 600px, bottom value in .slider is 2em */
+@media (max-width: 600px) {
+  .slider {
+    bottom: 1em;
+  }
+}
+
+.track {
+  /* Top value to align your track to the center of your thumb */
+  top: calc((var(--thumb-size) + 2 * var(--thumb-border))/2 - var(--track-height)/2);
+
+  /* thickness of the track */
+  height: var(--track-height);
+  border-radius: 10px;
+ /* default color of your track */
+  background: var(--track-color);
+}
+
+.track.track-0 {
+  /* color of the track before the thumb */
+  background: var(--main-color);
+}
+
+.thumb {
+  cursor: pointer;
+  /*color for the thumb */
+  background: white;
+  /* shape of the thumb: circle */
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  border-radius: 100%;
+  border: var(--thumb-border) solid var(--main-color);
+  /* remove default outline when selected */
+  outline: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  font-family: inherit;
+}
+
+.thumb:hover {
+  box-shadow: 0 0 0 8px var(--main-color-hover);
+}
+
+/* Slider styling when disabled (algo running) */
+.slider.disabled .thumb {
+  border-color: var(--disabled-color);
+}
+
+.slider.disabled .thumb:hover {
+  cursor: auto;
+  box-shadow: none;
+}
+
+.slider.disabled  .track.track-0{
+  background: var(--disabled-color);
+}

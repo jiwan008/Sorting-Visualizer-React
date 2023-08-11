@@ -1,0 +1,143 @@
+.toolbar-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+
+  margin-bottom: 10px;
+  background-color: white;
+  min-height: 100px;
+}
+
+.left-buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  margin-top: -10px;
+  width: 40%;
+  gap: 20px;
+
+  align-items: center;
+}
+
+.right-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 45%;
+  gap: 10%;
+}
+
+.right-buttons-container button {
+  height: 30px;
+}
+
+.control-buttons, .algo-buttons {
+  display: flex;
+  gap: min(20px, 10%);
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+.slider-container{
+  width: 45%;
+  display: flex;
+  gap: 10%;
+}
+
+#elements-slider, #speed-slider {
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.label {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+.toolbar-text {
+  color: #b79147;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px;
+  text-align: center;
+}
+
+.value-display {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 50px;
+}
+
+button {
+  background-color: #A51C30;
+  border-radius: 8px;
+  border-style: none;
+
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+
+  text-align: center;
+  text-decoration: none;
+
+  touch-action: manipulation;
+
+  margin-top: 10px;
+
+  min-height: 50px;
+
+  font-family: inherit;
+
+}
+
+/* If the viewport size is less than 600px */
+@media (max-width: 600px) {
+  button {
+    font-size: 12px;
+  }
+}
+
+button:hover {
+  background-color: #a51c31c5 !important;
+}
+
+button:disabled {
+  background-color: grey;
+  cursor: auto ;
+}
+
+button:disabled:hover {
+  background-color: grey !important;
+}
+
+/*  Cell Visualizer Specific */
+.playback-control-buttons {
+  justify-content: space-evenly;
+}
+
+.manual-playback-buttons-container, 
+    .auto-playback-buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.manual-playback-buttons, 
+    .auto-playback-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
