@@ -2,7 +2,7 @@
 
 Sorting Algorithms Visualizer is a web app created to visualize the operations of various sorting algorithms. 
 
-Test the web app out [here](https://ianc13.github.io/Sorting-Algo-Visualizer/)!
+TRY LIVE [here](https://jiwan008.github.io/Sorting-Visualizer-React/)!
 
 ## Description
 
